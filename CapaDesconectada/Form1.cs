@@ -1,4 +1,5 @@
 ﻿using AccesoDatos;
+using CapaDesconectada.NorthwindTableAdapters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,13 @@ namespace CapaDesconectada
         {
 
             gridNoTipado.DataSource = customerRepository.ObtenerTodos();
+        }
+
+        CustomersTableAdapter adaptador = new CustomersTableAdapter();
+        private void btnObtenerTipado_Click(object sender, EventArgs e)
+        {
+            var customers = adaptador.GetData();
+            gridTipado.DataSource = customers;
         }
     }
 }

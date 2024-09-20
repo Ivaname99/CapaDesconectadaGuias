@@ -96,6 +96,7 @@
             this.btnObtenerTipado.TabIndex = 3;
             this.btnObtenerTipado.Text = "Obtener datos tipados";
             this.btnObtenerTipado.UseVisualStyleBackColor = true;
+            this.btnObtenerTipado.Click += new System.EventHandler(this.btnObtenerTipado_Click);
             // 
             // Form1
             // 
