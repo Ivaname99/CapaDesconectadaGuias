@@ -51,6 +51,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tboxAddress = new System.Windows.Forms.TextBox();
             this.btnInsertarCliente = new System.Windows.Forms.Button();
+            this.btnInsertarT = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridNoTipado)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -91,7 +92,7 @@
             // 
             this.btnBuscarNt.Location = new System.Drawing.Point(17, 290);
             this.btnBuscarNt.Name = "btnBuscarNt";
-            this.btnBuscarNt.Size = new System.Drawing.Size(202, 23);
+            this.btnBuscarNt.Size = new System.Drawing.Size(234, 23);
             this.btnBuscarNt.TabIndex = 5;
             this.btnBuscarNt.Text = "Buscar Cliente";
             this.btnBuscarNt.UseVisualStyleBackColor = true;
@@ -117,6 +118,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnInsertarT);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.tboxBuscarTipado);
             this.groupBox2.Controls.Add(this.btnBuscarTipado);
@@ -165,9 +167,9 @@
             // 
             // btnBuscarTipado
             // 
-            this.btnBuscarTipado.Location = new System.Drawing.Point(45, 286);
+            this.btnBuscarTipado.Location = new System.Drawing.Point(19, 290);
             this.btnBuscarTipado.Name = "btnBuscarTipado";
-            this.btnBuscarTipado.Size = new System.Drawing.Size(202, 23);
+            this.btnBuscarTipado.Size = new System.Drawing.Size(94, 23);
             this.btnBuscarTipado.TabIndex = 8;
             this.btnBuscarTipado.Text = "Buscar Cliente";
             this.btnBuscarTipado.UseVisualStyleBackColor = true;
@@ -263,6 +265,16 @@
             this.btnInsertarCliente.UseVisualStyleBackColor = true;
             this.btnInsertarCliente.Click += new System.EventHandler(this.btnInsertarCliente_Click);
             // 
+            // btnInsertarT
+            // 
+            this.btnInsertarT.Location = new System.Drawing.Point(146, 290);
+            this.btnInsertarT.Name = "btnInsertarT";
+            this.btnInsertarT.Size = new System.Drawing.Size(108, 23);
+            this.btnInsertarT.TabIndex = 11;
+            this.btnInsertarT.Text = "Insertar";
+            this.btnInsertarT.UseVisualStyleBackColor = true;
+            this.btnInsertarT.Click += new System.EventHandler(this.btnInsertarT_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,6 +331,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tboxAddress;
         private System.Windows.Forms.Button btnInsertarCliente;
+        private System.Windows.Forms.Button btnInsertarT;
     }
 }
 

@@ -50,16 +50,12 @@ namespace CapaDesconectada
                 ContactTitle = tboxContactTitle.Text,
                 Address = tboxAddress.Text,
             };
-            MessageBox.Show(cliente.CustomerID);
-            MessageBox.Show(cliente.CompanyName);
-            MessageBox.Show(cliente.ContactName);
-            MessageBox.Show(cliente.ContactTitle);
-            MessageBox.Show(cliente.Address);
             return cliente;
         }
         #endregion
 
         #region Tipado
+
         CustomersTableAdapter adaptador = new CustomersTableAdapter();
         private void btnObtenerTipado_Click(object sender, EventArgs e)
         {
@@ -74,16 +70,26 @@ namespace CapaDesconectada
             {
                 var objeto1 = customerRepository.ExtraerInformacionCliente(customer);
                 Console.WriteLine(customer);
+                var listaClientes = new List<Customer> { objeto1 };
+                gridTipado.DataSource = listaClientes;
+
             }
         }
+        private void btnInsertarT_Click(object sender, EventArgs e)
+        {
+            var cliente = CrearCliente();
+            adaptador.Insert(cliente.CustomerID, cliente.CompanyName, cliente.ContactName, cliente.ContactTitle, cliente.Address, cliente.City, cliente.Region, cliente.PostalCode, cliente.Country, cliente.Phone,
+            cliente.Fax);
+            MessageBox.Show("Proceso realizado correctamente");
+        }
+
+
         #endregion
 
         public Form1()
         {
             InitializeComponent();
         }
-
-        
 
     }
 }
