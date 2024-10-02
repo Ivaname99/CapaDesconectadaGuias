@@ -87,13 +87,13 @@ namespace CapaDesconectada
             var customers = adaptador.GetData();
             gridTipado.DataSource = customers;
         }
-
         private void btnBuscarTipado_Click(object sender, EventArgs e)
         {
             var customer = adaptador.GetDataByCustomerID(tboxBuscarTipado.Text);
             if (customer != null)
             {
                 var objeto1 = customerRepository.ExtraerInformacionCliente(customer);
+                RellenarForm(objeto1);
                 Console.WriteLine(customer);
                 var listaClientes = new List<Customer> { objeto1 };
                 gridTipado.DataSource = listaClientes;
@@ -106,7 +106,42 @@ namespace CapaDesconectada
             cliente.Fax);
             MessageBox.Show("Proceso realizado correctamente");
         }
+        private void btnActualizarT_Click(object sender, EventArgs e)
+        {
+            var fila = adaptador.GetDataByCustomerID(tboxCustomerID.Text);
 
+
+            if (fila != null)
+            {
+                var datoOriginal = customerRepository.ExtraerInformacionCliente(fila);
+                var datosModificados = CrearCliente();
+                var filas = adaptador.Update(
+                    datosModificados.CustomerID,
+                    datosModificados.CompanyName,
+                    datosModificados.ContactName,
+                    datosModificados.ContactTitle,
+                    datosModificados.Address,
+                    datosModificados.City,
+                    datosModificados.Region,
+                    datosModificados.PostalCode,
+                    datosModificados.Country,
+                    datosModificados.Phone,
+                    datosModificados.Fax,
+                    datoOriginal.CustomerID,
+                    datoOriginal.CompanyName,
+                    datoOriginal.ContactName,
+                    datoOriginal.ContactTitle,
+                    datoOriginal.Address,
+                    datoOriginal.City,
+                    datoOriginal.Region,
+                    datoOriginal.PostalCode,
+                    datoOriginal.Country,
+                    datoOriginal.Phone,
+                    datoOriginal.Fax
+                    );
+                MessageBox.Show($"{filas} filas actualizadas");
+            }
+        }
 
         #endregion
 

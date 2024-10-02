@@ -138,11 +138,11 @@ namespace AccesoDatos
 
         private SqlCommand ParametrosSqlCustomers(SqlCommand commando, Customer cliente)
         {
-            commando.Parameters.AddWithValue("@CustomerID", cliente.CustomerID);
-            commando.Parameters.AddWithValue("@CompanyName", cliente.CompanyName);
-            commando.Parameters.AddWithValue("@ContactName", cliente.ContactName);
-            commando.Parameters.AddWithValue("@ContactTitle", cliente.ContactTitle);
-            commando.Parameters.AddWithValue("@Address", cliente.Address);
+            commando.Parameters.AddWithValue("CustomerID", cliente.CustomerID);
+            commando.Parameters.AddWithValue("CompanyName", cliente.CompanyName);
+            commando.Parameters.AddWithValue("ContactName", cliente.ContactName);
+            commando.Parameters.AddWithValue("ContactTitle", cliente.ContactTitle);
+            commando.Parameters.AddWithValue("Address", cliente.Address);
             return commando;
         }
     }

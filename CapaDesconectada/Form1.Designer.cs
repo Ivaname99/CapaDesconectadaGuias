@@ -53,6 +53,7 @@
             this.btnInsertarCliente = new System.Windows.Forms.Button();
             this.btnInsertarT = new System.Windows.Forms.Button();
             this.btnActualizarNT = new System.Windows.Forms.Button();
+            this.btnActualizarT = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridNoTipado)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -94,7 +95,7 @@
             // 
             this.btnBuscarNt.Location = new System.Drawing.Point(44, 290);
             this.btnBuscarNt.Name = "btnBuscarNt";
-            this.btnBuscarNt.Size = new System.Drawing.Size(82, 23);
+            this.btnBuscarNt.Size = new System.Drawing.Size(82, 30);
             this.btnBuscarNt.TabIndex = 5;
             this.btnBuscarNt.Text = "Buscar";
             this.btnBuscarNt.UseVisualStyleBackColor = true;
@@ -120,6 +121,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnActualizarT);
             this.groupBox2.Controls.Add(this.btnInsertarT);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.tboxBuscarTipado);
@@ -171,7 +173,7 @@
             // 
             this.btnBuscarTipado.Location = new System.Drawing.Point(19, 290);
             this.btnBuscarTipado.Name = "btnBuscarTipado";
-            this.btnBuscarTipado.Size = new System.Drawing.Size(94, 23);
+            this.btnBuscarTipado.Size = new System.Drawing.Size(94, 30);
             this.btnBuscarTipado.TabIndex = 8;
             this.btnBuscarTipado.Text = "Buscar Cliente";
             this.btnBuscarTipado.UseVisualStyleBackColor = true;
@@ -269,9 +271,9 @@
             // 
             // btnInsertarT
             // 
-            this.btnInsertarT.Location = new System.Drawing.Point(146, 290);
+            this.btnInsertarT.Location = new System.Drawing.Point(19, 331);
             this.btnInsertarT.Name = "btnInsertarT";
-            this.btnInsertarT.Size = new System.Drawing.Size(108, 23);
+            this.btnInsertarT.Size = new System.Drawing.Size(94, 30);
             this.btnInsertarT.TabIndex = 11;
             this.btnInsertarT.Text = "Insertar";
             this.btnInsertarT.UseVisualStyleBackColor = true;
@@ -281,11 +283,21 @@
             // 
             this.btnActualizarNT.Location = new System.Drawing.Point(145, 290);
             this.btnActualizarNT.Name = "btnActualizarNT";
-            this.btnActualizarNT.Size = new System.Drawing.Size(82, 23);
+            this.btnActualizarNT.Size = new System.Drawing.Size(82, 30);
             this.btnActualizarNT.TabIndex = 8;
             this.btnActualizarNT.Text = "Actualizar";
             this.btnActualizarNT.UseVisualStyleBackColor = true;
             this.btnActualizarNT.Click += new System.EventHandler(this.btnActualizarNT_Click);
+            // 
+            // btnActualizarT
+            // 
+            this.btnActualizarT.Location = new System.Drawing.Point(178, 290);
+            this.btnActualizarT.Name = "btnActualizarT";
+            this.btnActualizarT.Size = new System.Drawing.Size(94, 30);
+            this.btnActualizarT.TabIndex = 12;
+            this.btnActualizarT.Text = "Actualizar";
+            this.btnActualizarT.UseVisualStyleBackColor = true;
+            this.btnActualizarT.Click += new System.EventHandler(this.btnActualizarT_Click);
             // 
             // Form1
             // 
@@ -345,6 +357,7 @@
         private System.Windows.Forms.Button btnInsertarCliente;
         private System.Windows.Forms.Button btnInsertarT;
         private System.Windows.Forms.Button btnActualizarNT;
+        private System.Windows.Forms.Button btnActualizarT;
     }
 }
 
